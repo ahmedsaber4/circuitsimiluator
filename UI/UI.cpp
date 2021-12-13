@@ -104,6 +104,8 @@ ActionType UI::GetUserAction() const
 
 			case ITM_SWITCH:	return ADD_SWITCH;
 
+			case ITM_SAVE:  return  SAVE;
+
 
 			case ITM_EXIT:	return EXIT;	
 			
@@ -192,6 +194,9 @@ void UI::CreateDesignToolBar()
 	MenuItemImages[ITM_BATTERY] = "images\\Menu\\Menu_Battery.jpg";
 
 	MenuItemImages[ITM_SWITCH] = "images\\Menu\\Menu_Switch.jpg";
+
+	MenuItemImages[ITM_SAVE] = "images\\Menu\\Menu_SAVE.jpg";
+
 	MenuItemImages[ITM_EXIT] = "images\\Menu\\Menu_Exit.jpg";
 
 	//TODO: Prepare image for each menu item and add it to the list

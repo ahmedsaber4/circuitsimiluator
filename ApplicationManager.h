@@ -36,6 +36,13 @@ public:
 	//Gets a pointer to UI Object
 	UI* GetUI();
 	
+	// Saves the current circuit 
+	void Save(ofstream& file);
+
+	// Loads the circuit from the file 
+
+	void Load(ifstream& file);
+
 
 	//Adds a new component to the list of components
 	void AddComponent(Component* pComp);

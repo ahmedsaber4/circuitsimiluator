@@ -13,6 +13,20 @@ Component::Component()
 
 }
 
+
+
+
+//Returns whether the component is deleted or not
+bool Component::IsDeleted()const
+{
+
+	return wDeleted;
+}
+
+
+
+
 Component::~Component()
 {}
+
 

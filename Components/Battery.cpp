@@ -9,6 +9,12 @@ void Battery::Draw(UI* pUI)
 
 }
 
+
+
+void Battery::Save(ofstream& file) {
+	file << "BATT " << m_Label << " " << (m_pGfxInfo->PointsList[0].x) << " " << (m_pGfxInfo->PointsList[0].y) << endl;
+}
+
 void Battery::Operate()
 {
 

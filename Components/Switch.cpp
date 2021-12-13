@@ -1,4 +1,5 @@
 #include"Switch.h"
+
 Switch::Switch(GraphicsInfo* r_GfxInfo) :Component(r_GfxInfo)
 {}
 
@@ -12,4 +13,9 @@ void Switch::Draw(UI* pUI)
 void Switch::Operate()
 {
 
+}
+
+/* Saves the states of the component*/
+void Switch::Save(ofstream& file) {
+	file << "SWI " << m_Label << " " << (m_pGfxInfo->PointsList[0].x ) << " " << (m_pGfxInfo->PointsList[0].y) << endl;
 }

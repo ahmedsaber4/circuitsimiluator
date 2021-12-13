@@ -2,6 +2,7 @@
 #include "Actions\ActionAddRes.h"
 #include"Actions\ActionAddSW.h"
 #include"Actions\ActionAddBatt.h"
+#include"Actions/SaveAction .h"
 
 ApplicationManager::ApplicationManager()
 {
@@ -27,6 +28,30 @@ ActionType ApplicationManager::GetUserAction()
 }
 ////////////////////////////////////////////////////////////////////
 
+void ApplicationManager::Save(ofstream& file)
+{
+	file << CompCount <<" \n"  ;
+	for (int i = 0; i < CompCount; i++)
+	{
+
+
+		if(!CompList[i]->IsDeleted()){
+			CompList[i]->Save( file);
+	
+		}
+	}
+
+
+
+}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+
 void ApplicationManager::ExecuteAction(ActionType ActType)
 {
 	Action* pAct = nullptr;
@@ -40,6 +65,13 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new ActionAddSW(this);
 
 			break;
+
+		case SAVE:
+			pAct = new SaveAction(this);
+
+			break;
+
+	
 
 		case ADD_BATTERY:
 			pAct = new ActionAddBatt(this);

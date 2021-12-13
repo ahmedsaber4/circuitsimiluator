@@ -10,6 +10,11 @@ void Resistor::Draw(UI* pUI)
 
 }
 
+
+void Resistor::Save(ofstream& file) {
+	file << "RES " << m_Label << " " << (m_pGfxInfo->PointsList[0].x) << " " << (m_pGfxInfo->PointsList[0].y) << endl;
+}
+
 void Resistor::Operate()
 {
 

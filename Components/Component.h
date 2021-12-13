@@ -4,17 +4,18 @@
 #include "..\Defs.h"
 #include "..\UI\UI.h"
 #include "Connection.h"
+#include <fstream>
 
 
 //Base class for all components (resistor, capacitor,....etc) .
 class Component
 {
-private:
-	string m_Label;
+
 protected:
 
+	bool wDeleted;
 	int ID; //component ID
-
+	string m_Label;
 	double value; //component value
 
 
@@ -48,9 +49,13 @@ public:
 
 	//virtual void setInputPinStatus(int n, STATUS s)=0;	//set status of Inputpin # n, to be used by connection class.
 
-	/*
-	virtual   SAVE 
-	*/
+	// Returns whether the component is deleted or not
+	bool IsDeleted() const; //getter
+
+
+
+	// Saves the states of the component 
+	virtual void Save(ofstream& file) = 0;
 	
 	Component();	
 	

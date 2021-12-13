@@ -43,6 +43,8 @@ class UI
 		ITM_SWITCH,    //switch item in menu
 
 		ITM_BATTERY,  //Battery item in menu
+		ITM_SAVE,    // save item in menu
+
 
 		ITM_EXIT,		//Exit item
 		//TODO: Add more items names here

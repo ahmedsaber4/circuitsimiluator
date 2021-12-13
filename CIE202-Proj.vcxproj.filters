@@ -153,6 +153,9 @@
     <ClCompile Include="Actions\ActionAddBatt.cpp">
       <Filter>Actions</Filter>
     </ClCompile>
+    <ClCompile Include="Actions\SaveAction.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components\Component.h">
@@ -242,6 +245,9 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Actions\ActionAddBatt.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\SaveAction .h">
       <Filter>Actions</Filter>
     </ClInclude>
   </ItemGroup>
