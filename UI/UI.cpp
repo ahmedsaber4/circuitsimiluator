@@ -98,6 +98,13 @@ ActionType UI::GetUserAction() const
 			switch (ClickedItemOrder)
 			{
 			case ITM_RES:	return ADD_RESISTOR;
+
+
+			case ITM_BATTERY:	return ADD_BATTERY;
+
+			case ITM_SWITCH:	return ADD_SWITCH;
+
+
 			case ITM_EXIT:	return EXIT;	
 			
 			default: return DSN_TOOL;	//A click on empty place in desgin toolbar
@@ -182,6 +189,9 @@ void UI::CreateDesignToolBar()
 	//First prepare List of images for each menu item
 	string MenuItemImages[ITM_DSN_CNT];
 	MenuItemImages[ITM_RES] = "images\\Menu\\Menu_Resistor.jpg";
+	MenuItemImages[ITM_BATTERY] = "images\\Menu\\Menu_Battery.jpg";
+
+	MenuItemImages[ITM_SWITCH] = "images\\Menu\\Menu_Switch.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\Menu\\Menu_Exit.jpg";
 
 	//TODO: Prepare image for each menu item and add it to the list
@@ -220,8 +230,37 @@ void UI::DrawResistor(const GraphicsInfo &r_GfxInfo, bool selected) const
 		ResImage = "Images\\Comp\\Resistor.jpg";	//use image of the normal resistor
 
 	//Draw Resistor at Gfx_Info (1st corner)
-	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, COMP_HEIGHT);
+	pWind->DrawImage(ResImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH, 2* COMP_HEIGHT);
 }
+
+
+
+void UI::DrawSwitch(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string SWImage;
+	if (selected)
+		SWImage = "Images\\Comp\\Switch_HI.jpg";	//use image of highlighted resistor
+	else
+		SWImage = "Images\\Comp\\Switch.jpg";	//use image of the normal resistor
+
+	//Draw Switch at Gfx_Info (1st corner)
+	pWind->DrawImage(SWImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH,6*COMP_HEIGHT);
+}
+
+
+void UI::DrawBattery(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string BattImage;
+	if (selected)
+		BattImage = "Images\\Comp\\Bttery_HI.jpg";	//use image of highlighted resistor
+	else
+		BattImage = "Images\\Comp\\Battery.jpg";	//use image of the normal resistor
+
+	//Draw Battery at Gfx_Info (1st corner)
+	pWind->DrawImage(BattImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, COMP_WIDTH,5*COMP_HEIGHT);
+}
+
+
 
 //TODO: Add similar functions to draw all other components
 

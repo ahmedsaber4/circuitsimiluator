@@ -12,6 +12,13 @@ class Component
 private:
 	string m_Label;
 protected:
+
+	int ID; //component ID
+
+	double value; //component value
+
+
+
 	//Each component has two ending terminals (term1, term2)
 	double term1_volt, term2_volt;	//voltage at terminals 1&2
 
@@ -41,6 +48,9 @@ public:
 
 	//virtual void setInputPinStatus(int n, STATUS s)=0;	//set status of Inputpin # n, to be used by connection class.
 
+	/*
+	virtual   SAVE 
+	*/
 	
 	Component();	
 	

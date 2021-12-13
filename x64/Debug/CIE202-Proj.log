@@ -1,0 +1,11 @@
+﻿  ActionAddBatt.cpp
+  ActionAddRes.cpp
+  ActionAddSW.cpp
+  ApplicationManager.cpp
+  Battery.cpp
+  Component.cpp
+  Resistor.cpp
+  Switch.cpp
+  main.cpp
+  Generating Code...
+  CIE202-Proj.vcxproj -> E:\CIE\CIE Year 2\Fall\C++\Project C++\circuitsimiluator\x64\Debug\CIE202-Proj.exe

@@ -3,12 +3,19 @@
 
 //This header file contains some defenitions to be used all over the application
 
+
+
+
 //All possible actions
 enum ActionType 
 {
 	ADD_RESISTOR,		//Add a resistor
 	ADD_SWITCH,			//Add Switch
+
+	ADD_BATTERY,		//Add Battery
+
 	ADD_LAMP,			//Add LAMP
+
 	ADD_CONNECTION,		//Add Wire Connection
 
 	ADD_Label,			//Add Label to a Component, a Connection

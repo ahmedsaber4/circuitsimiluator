@@ -1,6 +1,7 @@
 #include "ApplicationManager.h"
 #include "Actions\ActionAddRes.h"
-
+#include"Actions\ActionAddSW.h"
+#include"Actions\ActionAddBatt.h"
 
 ApplicationManager::ApplicationManager()
 {
@@ -35,6 +36,15 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct= new ActionAddRes(this);
 			break;
 
+		case ADD_SWITCH:
+			pAct = new ActionAddSW(this);
+
+			break;
+
+		case ADD_BATTERY:
+			pAct = new ActionAddBatt(this);
+
+			break;
 		case ADD_CONNECTION:
 			//TODO: Create AddConection Action here
 			break;

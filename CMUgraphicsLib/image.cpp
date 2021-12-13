@@ -107,7 +107,7 @@ void image::Open(const char *cpFileName, imagetype itThisType) {
 		bmiImage->bmiHeader.biWidth = usWidth;
 		bmiImage->bmiHeader.biHeight = -usHeight;
 	
-		ucpImageData = new unsigned char[(usWidth * 4) * usHeight];
+		ucpImageData = new unsigned char[(usWidth *4 ) * usHeight];
 		if(ucpImageData == NULL) {
    		    throw OUT_OF_MEMORY;
 		}
